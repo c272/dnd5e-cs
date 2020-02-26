@@ -1,1 +1,254 @@
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ><Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" /><PropertyGroup><Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><GenerateDocumentationFile>true</GenerateDocumentationFile><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform><OutputType>Library</OutputType><AssemblyName>DnD5e</AssemblyName><TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion></PropertyGroup><PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' "><PlatformTarget>AnyCPU</PlatformTarget><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>bin\Debug\</OutputPath><DefineConstants>DEBUG;TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'"><PlatformTarget>AnyCPU</PlatformTarget><DebugType>pdbonly</DebugType><Optimize>true</Optimize><OutputPath>bin\Release\</OutputPath><DefineConstants>TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><ItemGroup><Reference Include="burrito-core" ><HintPath>Dependencies\burrito-core.dll</HintPath><SpecificVersion>False</SpecificVersion></Reference><Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" ><HintPath>Dependencies\Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL.dll</HintPath><SpecificVersion>False</SpecificVersion></Reference><Reference Include="System" ><SpecificVersion>False</SpecificVersion></Reference><Reference Include="System.Core" ><SpecificVersion>False</SpecificVersion></Reference><Reference Include="System.Xml.Linq" ><SpecificVersion>False</SpecificVersion></Reference><Reference Include="Microsoft.CSharp" ><SpecificVersion>False</SpecificVersion></Reference><Reference Include="System.Data" ><SpecificVersion>False</SpecificVersion></Reference><Reference Include="System.Xml" ><SpecificVersion>False</SpecificVersion></Reference><Reference Include="System.Net.Http" ><SpecificVersion>False</SpecificVersion></Reference></ItemGroup><ItemGroup><Compile Include="Data\_empty.cs" /><Compile Include="Data\AbilitySearchResults_results.cs" /><Compile Include="Data\AbilitySearchResults.cs" /><Compile Include="Data\Ability_skills.cs" /><Compile Include="Data\Ability.cs" /><Compile Include="Data\SkillSearchResults_results.cs" /><Compile Include="Data\SkillSearchResults.cs" /><Compile Include="Data\Skill_ability_score.cs" /><Compile Include="Data\Skill.cs" /><Compile Include="Data\ProficencySearchResults_results.cs" /><Compile Include="Data\ProficencySearchResults.cs" /><Compile Include="Data\Proficiency_classes.cs" /><Compile Include="Data\Proficiency.cs" /><Compile Include="Data\LanguageSearchResults_results.cs" /><Compile Include="Data\LanguageSearchResults.cs" /><Compile Include="Data\Language.cs" /><Compile Include="Data\ClassSearchResults_results.cs" /><Compile Include="Data\ClassSearchResults.cs" /><Compile Include="Data\DnDClass_proficiency_choices_from.cs" /><Compile Include="Data\DnDClass_proficiency_choices.cs" /><Compile Include="Data\DnDClass_proficiencies.cs" /><Compile Include="Data\DnDClass_saving_throws.cs" /><Compile Include="Data\DnDClass_starting_equipment.cs" /><Compile Include="Data\DnDClass_class_levels.cs" /><Compile Include="Data\DnDClass_subclasses.cs" /><Compile Include="Data\DnDClass_spellcasting.cs" /><Compile Include="Data\DnDClass.cs" /><Compile Include="Data\SubclassSearchResults_results.cs" /><Compile Include="Data\SubclassSearchResults.cs" /><Compile Include="Data\ClassStartingEquipment_class.cs" /><Compile Include="Data\ClassStartingEquipment_starting_equipment_item.cs" /><Compile Include="Data\ClassStartingEquipment_starting_equipment.cs" /><Compile Include="Data\ClassStartingEquipment_choice_1_from_item.cs" /><Compile Include="Data\ClassStartingEquipment_choice_1_from.cs" /><Compile Include="Data\ClassStartingEquipment_choice_1.cs" /><Compile Include="Data\ClassStartingEquipment_choice_2_from_item.cs" /><Compile Include="Data\ClassStartingEquipment_choice_2_from.cs" /><Compile Include="Data\ClassStartingEquipment_choice_2.cs" /><Compile Include="Data\ClassStartingEquipment_choice_3_from_item.cs" /><Compile Include="Data\ClassStartingEquipment_choice_3_from.cs" /><Compile Include="Data\ClassStartingEquipment_choice_3.cs" /><Compile Include="Data\ClassStartingEquipment_choice_4_from_item.cs" /><Compile Include="Data\ClassStartingEquipment_choice_4_from.cs" /><Compile Include="Data\ClassStartingEquipment_choice_4.cs" /><Compile Include="Data\ClassStartingEquipment.cs" /><Compile Include="Data\SpellcastingInfo_class.cs" /><Compile Include="Data\SpellcastingInfo_spellcasting_ability.cs" /><Compile Include="Data\SpellcastingInfo_info.cs" /><Compile Include="Data\SpellcastingInfo.cs" /><Compile Include="Data\SpellsResults_results.cs" /><Compile Include="Data\SpellsResults.cs" /><Compile Include="Data\FeaturesResults_results.cs" /><Compile Include="Data\FeaturesResults.cs" /><Compile Include="Data\ProficienciesResults_results.cs" /><Compile Include="Data\ProficienciesResults.cs" /><Compile Include="Data\LevelsResults__features.cs" /><Compile Include="Data\LevelsResults__spellcasting.cs" /><Compile Include="Data\LevelsResults__class_specific.cs" /><Compile Include="Data\LevelsResults__class.cs" /><Compile Include="Data\LevelsResults__.cs" /><Compile Include="Data\LevelsResults_.cs" /><Compile Include="Data\Level_features.cs" /><Compile Include="Data\Level_spellcasting.cs" /><Compile Include="Data\Level_class_specific.cs" /><Compile Include="Data\Level_class.cs" /><Compile Include="Data\Level_.cs" /><Compile Include="Data\LevelFeatures_results.cs" /><Compile Include="Data\LevelFeatures.cs" /><Compile Include="Data\LevelSpells_results.cs" /><Compile Include="Data\LevelSpells.cs" /><Compile Include="Data\DnDSubclassResults_results.cs" /><Compile Include="Data\DnDSubclassResults.cs" /><Compile Include="Data\DnDSubclass_class.cs" /><Compile Include="Data\DnDSubclass.cs" /><Compile Include="Data\SubclassFeatures_results.cs" /><Compile Include="Data\SubclassFeatures.cs" /><Compile Include="Data\SubclassLevel_features.cs" /><Compile Include="Data\SubclassLevel_class.cs" /><Compile Include="Data\SubclassLevel_subclass.cs" /><Compile Include="Data\SubclassLevel.cs" /><Compile Include="Data\SubclassLevelFeatures.cs" /><Compile Include="Data\FeatureResults_results.cs" /><Compile Include="Data\FeatureResults.cs" /><Compile Include="Data\Feature_class.cs" /><Compile Include="Data\Feature.cs" /><Compile Include="Data\IndependentSpellcastingInfo_class.cs" /><Compile Include="Data\IndependentSpellcastingInfo_spellcasting_ability.cs" /><Compile Include="Data\IndependentSpellcastingInfo_info.cs" /><Compile Include="Data\IndependentSpellcastingInfo.cs" /><Compile Include="Data\IndependentStartingEquipment_class.cs" /><Compile Include="Data\IndependentStartingEquipment_starting_equipment_item.cs" /><Compile Include="Data\IndependentStartingEquipment_starting_equipment.cs" /><Compile Include="Data\IndependentStartingEquipment_choice_1_from_item.cs" /><Compile Include="Data\IndependentStartingEquipment_choice_1_from.cs" /><Compile Include="Data\IndependentStartingEquipment_choice_1.cs" /><Compile Include="Data\IndependentStartingEquipment_choice_2_from_item.cs" /><Compile Include="Data\IndependentStartingEquipment_choice_2_from.cs" /><Compile Include="Data\IndependentStartingEquipment_choice_2.cs" /><Compile Include="Data\IndependentStartingEquipment.cs" /><Compile Include="Data\RacesResults_results.cs" /><Compile Include="Data\RacesResults.cs" /><Compile Include="Data\Race_ability_bonuses.cs" /><Compile Include="Data\Race_starting_proficiencies.cs" /><Compile Include="Data\Race_starting_proficiency_options_from.cs" /><Compile Include="Data\Race_starting_proficiency_options.cs" /><Compile Include="Data\Race_languages.cs" /><Compile Include="Data\Race_traits.cs" /><Compile Include="Data\Race_subraces.cs" /><Compile Include="Data\Race.cs" /><Compile Include="Data\Subrace_results.cs" /><Compile Include="Data\Subrace_.cs" /><Compile Include="Data\RaceTraits_results.cs" /><Compile Include="Data\RaceTraits.cs" /><Compile Include="Data\SubraceResults_results.cs" /><Compile Include="Data\SubraceResults.cs" /><Compile Include="Data\Subrace_race.cs" /><Compile Include="Data\Subrace_ability_bonuses.cs" /><Compile Include="Data\Subrace_racial_traits.cs" /><Compile Include="Data\Subrace.cs" /><Compile Include="Data\SubraceTraits_results.cs" /><Compile Include="Data\SubraceTraits.cs" /><Compile Include="Data\SubraceProficiencies.cs" /><Compile Include="Data\TraitResults_results.cs" /><Compile Include="Data\TraitResults.cs" /><Compile Include="Data\Trait_races.cs" /><Compile Include="Data\Trait_subraces.cs" /><Compile Include="Data\Trait.cs" /><Compile Include="Data\EquipmentResults_results.cs" /><Compile Include="Data\EquipmentResults.cs" /><Compile Include="Data\Equipment_cost.cs" /><Compile Include="Data\Equipment_damage_damage_type.cs" /><Compile Include="Data\Equipment_damage.cs" /><Compile Include="Data\Equipment_range.cs" /><Compile Include="Data\Equipment_properties.cs" /><Compile Include="Data\Equipment.cs" /><Compile Include="Data\WeaponEquipment_cost.cs" /><Compile Include="Data\WeaponEquipment_damage_damage_type.cs" /><Compile Include="Data\WeaponEquipment_damage.cs" /><Compile Include="Data\WeaponEquipment_range.cs" /><Compile Include="Data\WeaponEquipment_properties.cs" /><Compile Include="Data\WeaponEquipment.cs" /><Compile Include="Data\ArmourEquipment_armor_class.cs" /><Compile Include="Data\ArmourEquipment_cost.cs" /><Compile Include="Data\ArmourEquipment.cs" /><Compile Include="Data\WeaponPropertiesResults_results.cs" /><Compile Include="Data\WeaponPropertiesResults.cs" /><Compile Include="Data\WeaponProperties.cs" /><Compile Include="Data\SpellResults_results.cs" /><Compile Include="Data\SpellResults.cs" /><Compile Include="Data\Spell_school.cs" /><Compile Include="Data\Spell_classes.cs" /><Compile Include="Data\Spell_subclasses.cs" /><Compile Include="Data\Spell.cs" /><Compile Include="Data\MonsterResults_results.cs" /><Compile Include="Data\MonsterResults.cs" /><Compile Include="Data\Monster_speed.cs" /><Compile Include="Data\Monster_proficiencies.cs" /><Compile Include="Data\Monster_senses.cs" /><Compile Include="Data\Monster_special_abilities.cs" /><Compile Include="Data\Monster_actions.cs" /><Compile Include="Data\Monster_legendary_actions.cs" /><Compile Include="Data\Monster.cs" /><Compile Include="Data\ConditionResults_results.cs" /><Compile Include="Data\ConditionResults.cs" /><Compile Include="Data\Condition.cs" /><Compile Include="Data\DamageTypeResults_results.cs" /><Compile Include="Data\DamageTypeResults.cs" /><Compile Include="Data\DamageType.cs" /><Compile Include="Data\MagicSchoolResults_results.cs" /><Compile Include="Data\MagicSchoolResults.cs" /><Compile Include="Data\MagicSchool.cs" /><Compile Include="Character.cs" /><Compile Include="Classes.cs" /><Compile Include="Subclasses.cs" /><Compile Include="Features.cs" /><Compile Include="Spellcasting.cs" /><Compile Include="StartingEquipment.cs" /><Compile Include="Races.cs" /><Compile Include="Subraces.cs" /><Compile Include="Traits.cs" /><Compile Include="Equipment.cs" /><Compile Include="Spells.cs" /><Compile Include="Monsters.cs" /><Compile Include="Mechanics.cs" /><Compile Include="_globals.cs" /></ItemGroup><Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" /></Project>
+﻿<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>DnD5e</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <ProjectGuid>{0F872CC5-6B2E-45C3-B4AA-9157E1961D40}</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>DnD5e</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="burrito-core">
+      <HintPath>Dependencies\burrito-core.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>Dependencies\Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Core">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Data">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Xml">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\_empty.cs" />
+    <Compile Include="Data\AbilitySearchResults_results.cs" />
+    <Compile Include="Data\AbilitySearchResults.cs" />
+    <Compile Include="Data\Ability_skills.cs" />
+    <Compile Include="Data\Ability.cs" />
+    <Compile Include="Data\SkillSearchResults_results.cs" />
+    <Compile Include="Data\SkillSearchResults.cs" />
+    <Compile Include="Data\Skill_ability_score.cs" />
+    <Compile Include="Data\Skill.cs" />
+    <Compile Include="Data\ProficencySearchResults_results.cs" />
+    <Compile Include="Data\ProficencySearchResults.cs" />
+    <Compile Include="Data\Proficiency_classes.cs" />
+    <Compile Include="Data\Proficiency.cs" />
+    <Compile Include="Data\LanguageSearchResults_results.cs" />
+    <Compile Include="Data\LanguageSearchResults.cs" />
+    <Compile Include="Data\Language.cs" />
+    <Compile Include="Data\ClassSearchResults_results.cs" />
+    <Compile Include="Data\ClassSearchResults.cs" />
+    <Compile Include="Data\DnDClass_proficiency_choices_from.cs" />
+    <Compile Include="Data\DnDClass_proficiency_choices.cs" />
+    <Compile Include="Data\DnDClass_proficiencies.cs" />
+    <Compile Include="Data\DnDClass_saving_throws.cs" />
+    <Compile Include="Data\DnDClass_starting_equipment.cs" />
+    <Compile Include="Data\DnDClass_class_levels.cs" />
+    <Compile Include="Data\DnDClass_subclasses.cs" />
+    <Compile Include="Data\DnDClass_spellcasting.cs" />
+    <Compile Include="Data\DnDClass.cs" />
+    <Compile Include="Data\SubclassSearchResults_results.cs" />
+    <Compile Include="Data\SubclassSearchResults.cs" />
+    <Compile Include="Data\ClassStartingEquipment_class.cs" />
+    <Compile Include="Data\ClassStartingEquipment_starting_equipment_item.cs" />
+    <Compile Include="Data\ClassStartingEquipment_starting_equipment.cs" />
+    <Compile Include="Data\ClassStartingEquipment_choice_1_from_item.cs" />
+    <Compile Include="Data\ClassStartingEquipment_choice_1_from.cs" />
+    <Compile Include="Data\ClassStartingEquipment_choice_1.cs" />
+    <Compile Include="Data\ClassStartingEquipment_choice_2_from_item.cs" />
+    <Compile Include="Data\ClassStartingEquipment_choice_2_from.cs" />
+    <Compile Include="Data\ClassStartingEquipment_choice_2.cs" />
+    <Compile Include="Data\ClassStartingEquipment_choice_3_from_item.cs" />
+    <Compile Include="Data\ClassStartingEquipment_choice_3_from.cs" />
+    <Compile Include="Data\ClassStartingEquipment_choice_3.cs" />
+    <Compile Include="Data\ClassStartingEquipment_choice_4_from_item.cs" />
+    <Compile Include="Data\ClassStartingEquipment_choice_4_from.cs" />
+    <Compile Include="Data\ClassStartingEquipment_choice_4.cs" />
+    <Compile Include="Data\ClassStartingEquipment.cs" />
+    <Compile Include="Data\SpellcastingInfo_class.cs" />
+    <Compile Include="Data\SpellcastingInfo_spellcasting_ability.cs" />
+    <Compile Include="Data\SpellcastingInfo_info.cs" />
+    <Compile Include="Data\SpellcastingInfo.cs" />
+    <Compile Include="Data\SpellsResults_results.cs" />
+    <Compile Include="Data\SpellsResults.cs" />
+    <Compile Include="Data\FeaturesResults_results.cs" />
+    <Compile Include="Data\FeaturesResults.cs" />
+    <Compile Include="Data\ProficienciesResults_results.cs" />
+    <Compile Include="Data\ProficienciesResults.cs" />
+    <Compile Include="Data\LevelsResults__features.cs" />
+    <Compile Include="Data\LevelsResults__spellcasting.cs" />
+    <Compile Include="Data\LevelsResults__class_specific.cs" />
+    <Compile Include="Data\LevelsResults__class.cs" />
+    <Compile Include="Data\LevelsResults__.cs" />
+    <Compile Include="Data\LevelsResults_.cs" />
+    <Compile Include="Data\Level_features.cs" />
+    <Compile Include="Data\Level_spellcasting.cs" />
+    <Compile Include="Data\Level_class_specific.cs" />
+    <Compile Include="Data\Level_class.cs" />
+    <Compile Include="Data\Level_.cs" />
+    <Compile Include="Data\LevelFeatures_results.cs" />
+    <Compile Include="Data\LevelFeatures.cs" />
+    <Compile Include="Data\LevelSpells_results.cs" />
+    <Compile Include="Data\LevelSpells.cs" />
+    <Compile Include="Data\DnDSubclassResults_results.cs" />
+    <Compile Include="Data\DnDSubclassResults.cs" />
+    <Compile Include="Data\DnDSubclass_class.cs" />
+    <Compile Include="Data\DnDSubclass.cs" />
+    <Compile Include="Data\SubclassFeatures_results.cs" />
+    <Compile Include="Data\SubclassFeatures.cs" />
+    <Compile Include="Data\SubclassLevel_features.cs" />
+    <Compile Include="Data\SubclassLevel_class.cs" />
+    <Compile Include="Data\SubclassLevel_subclass.cs" />
+    <Compile Include="Data\SubclassLevel.cs" />
+    <Compile Include="Data\SubclassLevelFeatures.cs" />
+    <Compile Include="Data\FeatureResults_results.cs" />
+    <Compile Include="Data\FeatureResults.cs" />
+    <Compile Include="Data\Feature_class.cs" />
+    <Compile Include="Data\Feature.cs" />
+    <Compile Include="Data\IndependentSpellcastingInfo_class.cs" />
+    <Compile Include="Data\IndependentSpellcastingInfo_spellcasting_ability.cs" />
+    <Compile Include="Data\IndependentSpellcastingInfo_info.cs" />
+    <Compile Include="Data\IndependentSpellcastingInfo.cs" />
+    <Compile Include="Data\IndependentStartingEquipment_class.cs" />
+    <Compile Include="Data\IndependentStartingEquipment_starting_equipment_item.cs" />
+    <Compile Include="Data\IndependentStartingEquipment_starting_equipment.cs" />
+    <Compile Include="Data\IndependentStartingEquipment_choice_1_from_item.cs" />
+    <Compile Include="Data\IndependentStartingEquipment_choice_1_from.cs" />
+    <Compile Include="Data\IndependentStartingEquipment_choice_1.cs" />
+    <Compile Include="Data\IndependentStartingEquipment_choice_2_from_item.cs" />
+    <Compile Include="Data\IndependentStartingEquipment_choice_2_from.cs" />
+    <Compile Include="Data\IndependentStartingEquipment_choice_2.cs" />
+    <Compile Include="Data\IndependentStartingEquipment.cs" />
+    <Compile Include="Data\RacesResults_results.cs" />
+    <Compile Include="Data\RacesResults.cs" />
+    <Compile Include="Data\Race_ability_bonuses.cs" />
+    <Compile Include="Data\Race_starting_proficiencies.cs" />
+    <Compile Include="Data\Race_starting_proficiency_options_from.cs" />
+    <Compile Include="Data\Race_starting_proficiency_options.cs" />
+    <Compile Include="Data\Race_languages.cs" />
+    <Compile Include="Data\Race_traits.cs" />
+    <Compile Include="Data\Race_subraces.cs" />
+    <Compile Include="Data\Race.cs" />
+    <Compile Include="Data\Subrace_results.cs" />
+    <Compile Include="Data\Subrace_.cs" />
+    <Compile Include="Data\RaceTraits_results.cs" />
+    <Compile Include="Data\RaceTraits.cs" />
+    <Compile Include="Data\SubraceResults_results.cs" />
+    <Compile Include="Data\SubraceResults.cs" />
+    <Compile Include="Data\Subrace_race.cs" />
+    <Compile Include="Data\Subrace_ability_bonuses.cs" />
+    <Compile Include="Data\Subrace_racial_traits.cs" />
+    <Compile Include="Data\Subrace.cs" />
+    <Compile Include="Data\SubraceTraits_results.cs" />
+    <Compile Include="Data\SubraceTraits.cs" />
+    <Compile Include="Data\SubraceProficiencies.cs" />
+    <Compile Include="Data\TraitResults_results.cs" />
+    <Compile Include="Data\TraitResults.cs" />
+    <Compile Include="Data\Trait_races.cs" />
+    <Compile Include="Data\Trait_subraces.cs" />
+    <Compile Include="Data\Trait.cs" />
+    <Compile Include="Data\EquipmentResults_results.cs" />
+    <Compile Include="Data\EquipmentResults.cs" />
+    <Compile Include="Data\Equipment_cost.cs" />
+    <Compile Include="Data\Equipment_damage_damage_type.cs" />
+    <Compile Include="Data\Equipment_damage.cs" />
+    <Compile Include="Data\Equipment_range.cs" />
+    <Compile Include="Data\Equipment_properties.cs" />
+    <Compile Include="Data\Equipment.cs" />
+    <Compile Include="Data\WeaponEquipment_cost.cs" />
+    <Compile Include="Data\WeaponEquipment_damage_damage_type.cs" />
+    <Compile Include="Data\WeaponEquipment_damage.cs" />
+    <Compile Include="Data\WeaponEquipment_range.cs" />
+    <Compile Include="Data\WeaponEquipment_properties.cs" />
+    <Compile Include="Data\WeaponEquipment.cs" />
+    <Compile Include="Data\ArmourEquipment_armor_class.cs" />
+    <Compile Include="Data\ArmourEquipment_cost.cs" />
+    <Compile Include="Data\ArmourEquipment.cs" />
+    <Compile Include="Data\WeaponPropertiesResults_results.cs" />
+    <Compile Include="Data\WeaponPropertiesResults.cs" />
+    <Compile Include="Data\WeaponProperties.cs" />
+    <Compile Include="Data\SpellResults_results.cs" />
+    <Compile Include="Data\SpellResults.cs" />
+    <Compile Include="Data\Spell_school.cs" />
+    <Compile Include="Data\Spell_classes.cs" />
+    <Compile Include="Data\Spell_subclasses.cs" />
+    <Compile Include="Data\Spell.cs" />
+    <Compile Include="Data\MonsterResults_results.cs" />
+    <Compile Include="Data\MonsterResults.cs" />
+    <Compile Include="Data\Monster_speed.cs" />
+    <Compile Include="Data\Monster_proficiencies.cs" />
+    <Compile Include="Data\Monster_senses.cs" />
+    <Compile Include="Data\Monster_special_abilities.cs" />
+    <Compile Include="Data\Monster_actions.cs" />
+    <Compile Include="Data\Monster_legendary_actions.cs" />
+    <Compile Include="Data\Monster.cs" />
+    <Compile Include="Data\ConditionResults_results.cs" />
+    <Compile Include="Data\ConditionResults.cs" />
+    <Compile Include="Data\Condition.cs" />
+    <Compile Include="Data\DamageTypeResults_results.cs" />
+    <Compile Include="Data\DamageTypeResults.cs" />
+    <Compile Include="Data\DamageType.cs" />
+    <Compile Include="Data\MagicSchoolResults_results.cs" />
+    <Compile Include="Data\MagicSchoolResults.cs" />
+    <Compile Include="Data\MagicSchool.cs" />
+    <Compile Include="Character.cs" />
+    <Compile Include="Classes.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Subclasses.cs" />
+    <Compile Include="Features.cs" />
+    <Compile Include="Spellcasting.cs" />
+    <Compile Include="StartingEquipment.cs" />
+    <Compile Include="Races.cs" />
+    <Compile Include="Subraces.cs" />
+    <Compile Include="Traits.cs" />
+    <Compile Include="Equipment.cs" />
+    <Compile Include="Spells.cs" />
+    <Compile Include="Monsters.cs" />
+    <Compile Include="Mechanics.cs" />
+    <Compile Include="_globals.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
