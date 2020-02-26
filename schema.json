@@ -1,0 +1,587 @@
+{
+  "name": "DnD5e",
+  "root": "http://www.dnd5eapi.co/api/",
+  "sections": [
+    {
+      "name": "Character",
+      "routes": [
+        {
+          "route": "ability-scores?name={name}",
+          "validroute": "ability-scores",
+          "type": "GET",
+          "method": "SearchAbilities",
+          "returns": "AbilitySearchResults",
+          "desc": "Gets a list of ability scores matching a given name (or none at all!)",
+          "async": true
+        },
+        {
+          "route": "ability-scores/{index}",
+          "validroute": "ability-scores/str",
+          "type": "GET",
+          "method": "GetAbility",
+          "returns": "Ability",
+          "desc": "Gets a specific ability, given an ability index.",
+          "async": true
+        },
+        {
+          "route": "skills?name={name}",
+          "validroute": "skills",
+          "type": "GET",
+          "method": "SearchSkills",
+          "returns": "SkillSearchResults",
+          "desc": "Gets a list of skills matching a given name (or none at all!)",
+          "async": true
+        },
+        {
+          "route": "skills/{index}",
+          "validroute": "skills/arcana",
+          "type": "GET",
+          "method": "GetSkill",
+          "returns": "Skill",
+          "desc": "Gets a specific skill, given a skill index.",
+          "async": true
+        },
+        {
+          "route": "proficiencies?name={name}&type={type}",
+          "validroute": "proficiencies",
+          "type": "GET",
+          "method": "SearchProficiencies",
+          "returns": "ProficencySearchResults",
+          "desc": "Gets a list of proficiencies matching a given name (or none at all!)",
+          "async": true
+        },
+        {
+          "route": "proficiencies/{index}",
+          "validroute": "proficiencies/medium-armor",
+          "type": "GET",
+          "method": "GetProficiency",
+          "returns": "Proficiency",
+          "desc": "Gets a specific proficiency, given a proficiency index.",
+          "async": true
+        },
+        {
+          "route": "languages?name={name}&type={type}",
+          "validroute": "languages",
+          "type": "GET",
+          "method": "SearchLanguages",
+          "returns": "LanguageSearchResults",
+          "desc": "Gets a list of languages matching a given name (or none at all!)",
+          "async": true
+        },
+        {
+          "route": "languages/{index}",
+          "validroute": "languages/common",
+          "type": "GET",
+          "method": "GetLanguage",
+          "returns": "Language",
+          "desc": "Gets a specific language, given a language index.",
+          "async": true
+        }
+      ]
+    },
+    {
+        "name": "Classes",
+        "routes": 
+        [
+            {
+                "route": "classes?name={name}&hit_die={hit_die}",
+                "validroute": "classes",
+                "type": "GET",
+                "method": "SearchClasses",
+                "returns": "ClassSearchResults",
+                "desc": "Gets a list of classes matching a given name (or none at all!)",
+                "async": true
+            },
+            {
+                "route": "classes/{index}",
+                "validroute": "classes/warlock",
+                "type": "GET",
+                "method": "GetClass",
+                "returns": "DnDClass",
+                "desc": "Gets a specific class, given an class index.",
+                "async": true
+            },
+            {
+                "route": "classes/{index}/subclasses",
+                "validroute": "classes/warlock/subclasses?name={name}",
+                "type": "GET",
+                "method": "SearchSubclasses",
+                "returns": "SubclassSearchResults",
+                "desc": "Gets a list of subclasses from a parent class index matching a given name (or none at all!)",
+                "async": true
+            },
+            {
+                "route": "classes/{index}/starting-equipment",
+                "validroute": "classes/warlock/starting-equipment",
+                "type": "GET",
+                "method": "GetStartingEquipment",
+                "returns": "ClassStartingEquipment",
+                "desc": "Gets the starting equipment for a given class.",
+                "async": true
+            },
+            {
+                "route": "classes/{index}/spellcasting",
+                "validroute": "classes/warlock/spellcasting",
+                "type": "GET",
+                "method": "GetSpellcastingInfo",
+                "returns": "SpellcastingInfo",
+                "desc": "Gets the spellcasting information for a given class.",
+                "async": true
+            },
+            {
+                "route": "classes/{index}/spells",
+                "validroute": "classes/warlock/spells",
+                "type": "GET",
+                "method": "GetSpellsForClass",
+                "returns": "SpellsResults",
+                "desc": "Gets spells available for a given class.",
+                "async": true
+            },
+            {
+                "route": "classes/{index}/features",
+                "validroute": "classes/warlock/features",
+                "type": "GET",
+                "method": "GetFeaturesForClass",
+                "returns": "FeaturesResults",
+                "desc": "Gets the features available for a given class.",
+                "async": true
+            },
+            {
+                "route": "classes/{index}/proficiencies",
+                "validroute": "classes/warlock/proficiencies",
+                "type": "GET",
+                "method": "GetProficienciesForClass",
+                "returns": "ProficienciesResults",
+                "desc": "Gets the proficiencies available for a given class.",
+                "async": true
+            },
+            {
+                "route": "classes/{index}/levels",
+                "validroute": "classes/warlock/levels",
+                "type": "GET",
+                "method": "GetLevelsForClass",
+                "returns": "LevelsResults",
+                "desc": "Gets the level information for a given class.",
+                "async": true
+            },
+            {
+                "route": "classes/{index}/levels/{level}",
+                "validroute": "classes/warlock/levels/1",
+                "type": "GET",
+                "method": "GetLevelForClass",
+                "returns": "Level",
+                "desc": "Gets the information for a single level for a given class.",
+                "async": true
+            },
+            {
+                "route": "classes/{index}/levels/{level}/features",
+                "validroute": "classes/warlock/levels/1/features",
+                "type": "GET",
+                "method": "GetLevelFeaturesForClass",
+                "returns": "LevelFeatures",
+                "desc": "Gets the feature information for a single level for a given class.",
+                "async": true
+            },
+            {
+                "route": "classes/{index}/levels/{level}/spells",
+                "validroute": "classes/warlock/levels/1/spells",
+                "type": "GET",
+                "method": "GetLevelSpellsForClass",
+                "returns": "LevelSpells",
+                "desc": "Gets the spell information for a single level for a given class.",
+                "async": true
+            }
+        ]
+    },
+    {
+        "name": "Subclasses",
+        "routes": 
+        [
+            {
+                "route": "subclasses?name={name}&subclass_flavor={subclass_flavor}",
+                "validroute": "subclasses",
+                "type": "GET",
+                "method": "SearchSubclasses",
+                "returns": "DnDSubclassResults",
+                "desc": "Searches subclasses based on keywords (or not!).",
+                "async": true
+            },
+            {
+                "route": "subclasses/{index}",
+                "validroute": "subclasses/champion",
+                "type": "GET",
+                "method": "GetSubclass",
+                "returns": "DnDSubclass",
+                "desc": "Gets information on a subclass given an index.",
+                "async": true
+            },
+            {
+                "route": "subclasses/{index}/features",
+                "validroute": "subclasses/champion/features",
+                "type": "GET",
+                "method": "GetSubclassFeatures",
+                "returns": "SubclassFeatures",
+                "desc": "Gets feature information on a subclass given an index.",
+                "async": true
+            },
+            {
+                "route": "subclasses/{index}/levels",
+                "validroute": "subclasses/champion/levels",
+                "type": "GET",
+                "method": "GetSubclassLevels",
+                "returns": "SubclassLevels",
+                "desc": "Gets level information on a subclass given an index.",
+                "async": true
+            },
+            {
+                "route": "subclasses/{index}/levels/{level}",
+                "validroute": "subclasses/berserker/levels/3",
+                "type": "GET",
+                "method": "GetSubclassLevel",
+                "returns": "SubclassLevel",
+                "desc": "Gets information on a single level for a subclass.",
+                "async": true
+            },
+            {
+                "route": "subclasses/{index}/levels/{level}/features",
+                "validroute": "subclasses/champion/levels/1/features",
+                "type": "GET",
+                "method": "GetSubclassLevelFeatures",
+                "returns": "SubclassLevelFeatures",
+                "desc": "Gets information on features for a single level for a subclass.",
+                "async": true
+            }
+        ]
+    },
+    {
+        "name": "Features",
+        "routes":
+        [
+            {
+                "route": "features?name={name}&level={level}",
+                "validroute": "features",
+                "type": "GET",
+                "method": "SearchFeatures",
+                "returns": "FeatureResults",
+                "desc": "Searches all features based on keywords (or not!).",
+                "async": true
+            },
+            {
+                "route": "features/{index}",
+                "validroute": "features/action-surge-1-use",
+                "type": "GET",
+                "method": "GetFeature",
+                "returns": "Feature",
+                "desc": "Gets information on a single feature, given an index.",
+                "async": true
+            }
+        ]
+    },
+    {
+        "name": "Spellcasting",
+        "routes":
+        [
+            {
+                "route": "spellcasting/{index}",
+                "validroute": "spellcasting/1",
+                "type": "GET",
+                "method": "GetSpellcastingInfo",
+                "returns": "IndependentSpellcastingInfo",
+                "desc": "Gets spellcasting information, given an index.",
+                "async": true
+            }
+        ]
+    },
+    {
+        "name": "StartingEquipment",
+        "routes":
+        [
+            {
+                "route": "starting-equipment/{index}",
+                "validroute": "starting-equipment/1",
+                "type": "GET",
+                "method": "GetStartingEquipment",
+                "returns": "IndependentStartingEquipment",
+                "desc": "Gets starting equipment information, given an index.",
+                "async": true
+            }
+        ]
+    },
+    {
+        "name": "Races",
+        "routes":
+        [
+            {
+                "route": "races?name={name}&speed={speed}&alignment={alignment}&age={age}&size={size}&size_description={size_description}",
+                "validroute": "races",
+                "type": "GET",
+                "method": "SearchRaces",
+                "returns": "RacesResults",
+                "desc": "Searches for races, given a search term (or not!).",
+                "async": true
+            },
+            {
+                "route": "races/{index}",
+                "validroute": "races/dwarf",
+                "type": "GET",
+                "method": "GetRace",
+                "returns": "Race",
+                "desc": "Gets specific race information, given an index.",
+                "async": true
+            },
+            {
+                "route": "races/{index}/subraces",
+                "validroute": "races/dwarf/subraces",
+                "type": "GET",
+                "method": "GetSubraces",
+                "returns": "Subrace",
+                "desc": "Gets subraces for a given race, given an index.",
+                "async": true
+            },
+            {
+                "route": "races/{index}/traits",
+                "validroute": "races/dwarf/traits",
+                "type": "GET",
+                "method": "GetRaceTraits",
+                "returns": "RaceTraits",
+                "desc": "Gets traits for a given race, given an index.",
+                "async": true
+            }
+        ]
+    },
+    {
+        "name": "Subraces",
+        "routes":
+        [
+            {
+                "route": "subraces?name={name}",
+                "validroute": "subraces",
+                "type": "GET",
+                "method": "SearchSubraces",
+                "returns": "SubraceResults",
+                "desc": "Gets a list of subraces, given a search term (or not!).",
+                "async": true
+            },
+            {
+                "route": "subraces/{index}",
+                "validroute": "subraces/hill-dwarf",
+                "type": "GET",
+                "method": "GetSubrace",
+                "returns": "Subrace",
+                "desc": "Gets a subrace, given an index.",
+                "async": true
+            },
+            {
+                "route": "subraces/{index}/traits",
+                "validroute": "subraces/hill-dwarf/traits",
+                "type": "GET",
+                "method": "GetSubraceTraits",
+                "returns": "SubraceTraits",
+                "desc": "Gets traits for a subrace, given an index.",
+                "async": true
+            },
+            {
+                "route": "subraces/{index}/proficiencies",
+                "validroute": "subraces/hill-dwarf/proficiencies",
+                "type": "GET",
+                "method": "GetSubraceProficiencies",
+                "returns": "SubraceProficiencies",
+                "desc": "Gets proficiencies for a subrace, given an index.",
+                "async": true
+            }
+        ]
+    },
+    {
+        "name": "Traits",
+        "routes":
+        [
+            {
+                "route": "traits?name={name}",
+                "validroute": "traits",
+                "type": "GET",
+                "method": "SearchTraits",
+                "returns": "TraitResults",
+                "desc": "Searches traits by a search term (or not!)",
+                "async": true
+            },
+            {
+                "route": "traits/{index}",
+                "validroute": "traits/brave",
+                "type": "GET",
+                "method": "GetTrait",
+                "returns": "Trait",
+                "desc": "Gets information on a trait (given an index).",
+                "async": true
+            }
+        ]
+    },
+    {
+        "name": "Equipment",
+        "routes":
+        [
+            {
+                "route": "equipment?name={name}",
+                "validroute": "equipment",
+                "type": "GET",
+                "method": "SearchEquipment",
+                "returns": "EquipmentResults",
+                "desc": "Searches equipment with a keyword (or not!).",
+                "async": true
+            },
+            {
+                "route": "equipment/{index}",
+                "validroute": "equipment/club",
+                "type": "GET",
+                "method": "GetEquipment",
+                "returns": "Equipment",
+                "desc": "Gets information on a piece of equipment given an index.",
+                "async": true
+            },
+            {
+                "route": "equipment/{wepindex}",
+                "validroute": "equipment/club",
+                "type": "GET",
+                "method": "GetWeapon",
+                "returns": "WeaponEquipment",
+                "desc": "Gets information on a weapon given an index.",
+                "async": true
+            },
+            {
+                "route": "equipment/{armourindex}",
+                "validroute": "equipment/padded",
+                "type": "GET",
+                "method": "GetArmour",
+                "returns": "ArmourEquipment",
+                "desc": "Gets information on a piece of armour given an index.",
+                "async": true
+            },
+            {
+                "route": "weapon-properties?name={name}",
+                "validroute": "weapon-properties",
+                "type": "GET",
+                "method": "SearchWeaponProperties",
+                "returns": "WeaponPropertiesResults",
+                "desc": "Searches weapon properties given a keyword (or not!).",
+                "async": true
+            },
+            {
+                "route": "weapon-properties/{index}",
+                "validroute": "weapon-properties/ammunition",
+                "type": "GET",
+                "method": "GetWeaponProperties",
+                "returns": "WeaponProperties",
+                "desc": "Gets weapon properties when provided an index.",
+                "async": true
+            }
+        ]
+    },
+    {
+        "name": "Spells",
+        "routes":
+        [
+            {
+                "route": "spells?name={name}",
+                "validroute": "spells",
+                "type": "GET",
+                "method": "SearchSpells",
+                "returns": "SpellResults",
+                "desc": "Searches spells based on keywords (or not!).",
+                "async": true
+            },
+            {
+                "route": "spells/{index}",
+                "validroute": "spells/acid-arrow",
+                "type": "GET",
+                "method": "GetSpell",
+                "returns": "Spell",
+                "desc": "Gets information on a spell, given an index.",
+                "async": true
+            }
+        ]
+    },
+    {
+        "name": "Monsters",
+        "routes":
+        [
+            {
+                "route": "monsters?name={name}",
+                "validroute": "monsters",
+                "type": "GET",
+                "method": "SearchMonsters",
+                "returns": "MonsterResults",
+                "desc": "Searches monsters based on keywords (or not!).",
+                "async": true
+            },
+            {
+                "route": "monsters/{index}",
+                "validroute": "monsters/aboleth",
+                "type": "GET",
+                "method": "GetMonster",
+                "returns": "Monster",
+                "desc": "Gets information on a monster, given an index.",
+                "async": true
+            }
+        ]
+    },
+    {
+        "name": "Mechanics",
+        "routes":
+        [
+            {
+                "route": "conditions?name={name}",
+                "validroute": "conditions",
+                "type": "GET",
+                "method": "SearchConditions",
+                "returns": "ConditionResults",
+                "desc": "Searches all conditions based on keywords (or not!).",
+                "async": true
+            },
+            {
+                "route": "conditions/{index}",
+                "validroute": "conditions/blinded",
+                "type": "GET",
+                "method": "GetCondition",
+                "returns": "Condition",
+                "desc": "Gets information on a condition, given an index.",
+                "async": true
+            },
+            {
+                "route": "damage-types?name={name}",
+                "validroute": "damage-types",
+                "type": "GET",
+                "method": "SearchDamageTypes",
+                "returns": "DamageTypeResults",
+                "desc": "Searches all damage types based on keywords (or not!).",
+                "async": true
+            },
+            {
+                "route": "damage-types/{index}",
+                "validroute": "damage-types/acid",
+                "type": "GET",
+                "method": "GetDamageType",
+                "returns": "DamageType",
+                "desc": "Gets information on a damage type, given an index.",
+                "async": true
+            },
+            {
+                "route": "magic-schools?name={name}",
+                "validroute": "magic-schools",
+                "type": "GET",
+                "method": "SearchMagicSchools",
+                "returns": "MagicSchoolResults",
+                "desc": "Searches all magic schools based on keywords (or not!).",
+                "async": true
+            },
+            {
+                "route": "magic-schools/{index}",
+                "validroute": "magic-schools/abjuration",
+                "type": "GET",
+                "method": "GetMagicSchool",
+                "returns": "MagicSchool",
+                "desc": "Gets information on a magic school, given an index.",
+                "async": true
+            }
+        ]
+    }
+  ]
+}
