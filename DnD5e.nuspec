@@ -11,12 +11,12 @@
     <projectUrl>https://github.com/c272/dnd5e-cs</projectUrl>
     <icon>logo.png</icon>
     <description>$description$</description>
-    <releaseNotes>Initial release, adding all API endpoints for 26/2/20.</releaseNotes>
+    <releaseNotes>Remove strict version type on the Newtonsoft library.</releaseNotes>
     <copyright>(c) C272 2020</copyright>
     <tags>dnd dnd5e dungeons and dragons fifth edition</tags>
     <dependencies>
       <group targetFramework=".NETFramework4.7.1">
-        <dependency id="Newtonsoft.Json" version="[12.0.0.0]" />
+        <dependency id="Newtonsoft.Json" version="12.0.0.0" />
       </group>
     </dependencies>
   </metadata>
