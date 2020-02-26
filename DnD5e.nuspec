@@ -8,11 +8,19 @@
     <owners>$author$</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
-    <projectUrl>http://project_url_here_or_delete_this_line/</projectUrl>
-    <iconUrl>http://icon_url_here_or_delete_this_line/</iconUrl>
+    <projectUrl>https://github.com/c272/dnd5e-cs</projectUrl>
+    <icon>logo.png</icon>
     <description>$description$</description>
-    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
-    <copyright>Copyright 2020</copyright>
-    <tags>Tag1 Tag2</tags>
+    <releaseNotes>Initial release, adding all API endpoints for 26/2/20.</releaseNotes>
+    <copyright>(c) C272 2020</copyright>
+    <tags>dnd dnd5e dungeons and dragons fifth edition</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.7.1">
+        <dependency id="Newtonsoft.Json" version="[12.0.0.0]" />
+      </group>
+    </dependencies>
   </metadata>
+  <files>
+    <file src="logo.png" target="" />
+  </files>
 </package>
